@@ -15,6 +15,22 @@ public class Employee {
         return "Name = " + name + ", Hire Date = " + hireDate;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getHireDate() {
+        return hireDate;
+    }
+
+    public void setHireDate(LocalDate hireDate) {
+        this.hireDate = hireDate;
+    }
+
     public String work() {
        return name + " worked";
     }
