@@ -1,14 +1,19 @@
 package com.hr.personnel.client;
 
-import com.hr.personnel.Employee;
+import com.hr.personnel.*;
+
 import java.time.LocalDate;
 
 public class HRClient {
     public static void main(String[] args) {
-        Employee emp1 = new Employee("Micah", LocalDate.of(2023, 4, 3));
-        Employee emp2 = new Employee("Nala", LocalDate.of(2021, 11,10));
+        Department department = new Department();
 
-        System.out.println(emp1.getEmployeeInfo());
-        System.out.println(emp2.getEmployeeInfo());
+        SalariedEmployee emp1 = new SalariedEmployee("Mike", LocalDate.of(2020, 2, 3), 3000);
+        HourlyEmployee emp2 = new HourlyEmployee("Sara", LocalDate.of(2021, 5, 10), 160, 20);
+
+        department.addEmployee(emp1);
+        department.addEmployee(emp2);
+
+        System.out.println("Employees who worked: " + department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked());
     }
 }
