@@ -18,4 +18,9 @@ public class Employee {
     public String work() {
        return name + " worked";
     }
+
+    // Optional Exercise
+    public int computeNumberOfYearsWorkedSinceHired() {
+        return LocalDate.now().getYear() - hireDate.getYear();
+    }
 }
